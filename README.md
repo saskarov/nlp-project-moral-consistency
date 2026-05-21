@@ -17,8 +17,8 @@ This project investigates whether Large Language Models give *consistent* moral 
 
 ```
 sample_ethics.py          ->  data/ethics_sample.json        (Phase 1: sample ETHICS)
-generate_paraphrases_1.py ->  data/ethics_paraphrased.json   (Phase 2: paraphrase via Ollama)
-query_models_1.py         ->  data/ethics_responses.json     (Phase 3: query target models)
+generate_paraphrases.py ->  data/ethics_paraphrased.json   (Phase 2: paraphrase via Ollama)
+query_models.py         ->  data/ethics_responses.json     (Phase 3: query target models)
 analyze.py                ->  data/*.csv, plots/*.png         (Phase 4: analysis & figures)
 ```
 
@@ -29,8 +29,8 @@ analyze.py                ->  data/*.csv, plots/*.png         (Phase 4: analysis
 ├── README.md
 ├── requirements.txt
 ├── sample_ethics.py            # Phase 1 — sample & balance ETHICS scenarios
-├── generate_paraphrases_1.py   # Phase 2 — generate paraphrases via Ollama
-├── query_models_1.py           # Phase 3 — collect moral judgements from both models
+├── generate_paraphrases.py   # Phase 2 — generate paraphrases via Ollama
+├── query_models.py           # Phase 3 — collect moral judgements from both models
 ├── analyze.py                  # Phase 4 — consistency metrics, linguistic markers, plots
 ├── data/
 │   ├── ethics_sample.json      # 90 sampled scenarios
@@ -66,10 +66,10 @@ tar -xf ethics.tar
 python sample_ethics.py --data_dir ./ethics --n_per_category 20 --out_dir ./data
 
 # Phase 2 — generate 4 paraphrases per scenario (uses the 3B model)
-python generate_paraphrases_1.py
+python generate_paraphrases.py
 
 # Phase 3 — query both models for moral judgements (~1000 calls)
-python query_models_1.py \
+python query_models.py \
   --models "hf.co/bartowski/Llama-3.2-3B-Instruct-GGUF:Q4_K_M" \
            "hf.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF:Q4_K_M"
 
