@@ -1,0 +1,61 @@
+{
+  "3B": {
+    "embedding_consistency_mean": 0.612,
+    "verdict_consistency_mean": 0.7222222222222222,
+    "refusal_rate": 0.05555555555555555,
+    "mean_hedge_count": 0.12393162393162394,
+    "mean_modal_count": 0.7222222222222222,
+    "verdict_distribution": {
+      "ambiguous": 0.49572649572649574,
+      "acceptable": 0.452991452991453,
+      "unacceptable": 0.029914529914529916,
+      "refusal": 0.021367521367521368
+    }
+  },
+  "8B": {
+    "embedding_consistency_mean": 0.5731,
+    "verdict_consistency_mean": 0.6888888888888889,
+    "refusal_rate": 0.07264957264957266,
+    "mean_hedge_count": 0.09401709401709402,
+    "mean_modal_count": 0.6324786324786325,
+    "verdict_distribution": {
+      "ambiguous": 0.4658119658119658,
+      "acceptable": 0.44871794871794873,
+      "refusal": 0.05555555555555555,
+      "unacceptable": 0.029914529914529916
+    }
+  },
+  "by_category": {
+    "commonsense": {
+      "3B": 0.7133333333333333,
+      "8B": 0.7333333333333333,
+      "embedding_consistency_3B": 0.5798,
+      "embedding_consistency_8B": 0.5538
+    },
+    "justice": {
+      "3B": 0.82,
+      "8B": 0.64,
+      "embedding_consistency_3B": 0.6773,
+      "embedding_consistency_8B": 0.5849
+    },
+    "deontology": {
+      "3B": 0.8333333333333334,
+      "8B": 0.5
+    },
+    "virtue": {
+      "3B": 0.7000000000000001,
+      "8B": 0.7999999999999999,
+      "embedding_consistency_3B": 0.6519,
+      "embedding_consistency_8B": 0.6732
+    },
+    "utilitarianism": {
+      "3B": 0.6428571428571429,
+      "8B": 0.6142857142857142,
+      "embedding_consistency_3B": 0.6342,
+      "embedding_consistency_8B": 0.5669
+    }
+  },
+  "paraphraser_refusal_rate": 0.23076923076923078,
+  "total_responses": 468,
+  "valid_responses": 360
+}
