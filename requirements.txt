@@ -1,0 +1,19 @@
+# Right, Wrong, and Everything in Between — Python dependencies
+# Requires Python 3.11 or 3.12 (PyTorch does not yet support 3.13)
+
+# Core data handling
+pandas>=2.0.0
+numpy>=1.26.0
+
+# NLP & embeddings
+sentence-transformers>=2.7.0
+scikit-learn>=1.4.0
+scipy>=1.13.0
+
+# Visualisation
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Note: paraphrase generation and model querying use a local Ollama
+# server (https://ollama.com) accessed via its REST API — no Python
+# SDK is required for those steps.
